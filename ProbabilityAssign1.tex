@@ -303,28 +303,38 @@ Assume that there are equal number of males and females.}
 \section*{\textbf{Answer}}
 \begin{flushleft}\textit{Bayes' theorem} will be useful while solving this question.\end{flushleft}
 
-\textit{Let A be the event that the person is male.}\\ 
-\textit{Let B be the event that the person has grey hair.}\\ 
+\textit{Let A be the event that the person is male.} 
+
+\textit{Let B be the event that the person has grey hair.} 
 We want to find the probability of A given B, i.e., \pr{A/B}.
 
 \begin{flushleft}By Bayes' theorem, we have:\end{flushleft}
 
-$$\pr{A/B} = \pr{B/A} \cdot \pr{A} / \pr{B}$$
+\begin{align}\pr{A/B} = \pr{B/A} \cdot \pr{A} / \pr{B}\end{align}
 
-We know that $$\pr{male} = \pr{female} = 0.5.$$\\ since there are an equal number of men and women.\\ We also know that $$\pr{B/A} = 0.05$$ since 5\% of men have grey hair.
+We know that \begin{align}\pr{male} = \pr{female} = 0.5.\end{align}
+since there are an equal number of men and women.
 
-To find \pr{B}, we need to use the \textit{law of total probability}.\\ 
+We also know that \begin{align}\pr{B/A} = 0.05\end{align} 
+since 5\% of men have grey hair.
+
+To find \pr{B}, we need to use the \textit{law of total probability}. 
 We can partition the sample space into two events: having grey hair and not having grey hair. Then:
 
-$$\pr{B} = \pr{B/A} \cdot \pr{A} + \pr{B/A^{c}} \cdot \pr{A^{c}}$$
+\begin{align}\pr{B} = \pr{B/A} \cdot \pr{A} + \pr{B/A^\prime} \cdot \pr{A^\prime}\end{align}
 
-We know that $$\pr{B/A^{c}} = 0.0025$$ since 0.25\% of women have grey hair. We also know that $$\pr{A^{c}} = 0.5$$ since there are an equal number of men and women. Therefore:
+We know that 
+\begin{align}\pr{B/A^\prime} = 0.0025\end{align} 
+since 0.25\% of women have grey hair. 
+We also know that 
+\begin{align}\pr{A^\prime} = 0.5\end{align} 
+since there are an equal number of men and women. Therefore:
 
-$$\pr{B} = 0.05 \cdot 0.5 + 0.0025 \cdot 0.5 = 0.02625 $$
+\begin{align}\pr{B} = 0.05 \cdot 0.5 + 0.0025 \cdot 0.5 = 0.02625 \end{align}
 
 Putting these values into \textit{Bayes' theorem} to get:
 
-$$\pr{A/B} = 0.05 \cdot 0.5 / 0.02625 = 0.9524$$
+\begin{align}\pr{A/B} = 0.05 \cdot 0.5 / 0.02625 = 0.9524\end{align}
 
 \textbf{Therefore, the probability that a grey-haired person selected at random is male is approximately 0.9524, or 95.24 \%.}
 
