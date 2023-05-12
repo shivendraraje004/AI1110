@@ -21,6 +21,8 @@
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
 \usepackage[document]{ragged2e}
+\usepackage{array}
+\usepackage{multirow}
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
@@ -303,27 +305,31 @@ Assume that there are equal number of males and females.}
 \section*{\textbf{Answer}}
 let us define two random variables.
 
-First we'll define X as random variable whose value is \textit{1 if selected person is a male and 0 if selected person is a female.}
+\begin{flushleft}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|m{2cm}|m{3cm}|m{2cm}|}
+\hline
+Random variable & Event & Value assigned\\
+\hline
+\multirow{2}{2cm}{X}
+ &1.selected person is a male & 1 \\
+
+ &
+ 2.selected person is a female & 0 \\
+\hline
+\multirow{2}{2cm}{Y}
+ &1.selected person has grey hair & 1 \\
+ 
+ &2.selected person does not have grey hair & 0 \\
+\hline
+\end{tabular}
+%\caption{Table for defining random variables.}
 
 
-Then, we'll define Y as a random variable whose value is \textit{1 if selected person has grey hair and 0 if selected person does not have grey hair.}
-
-\begin{align}
-X = 
-\begin{cases}
-   1 &\textit{person selected is a male.}\\
-   0 &\textit{person selected is a female.}
-\end {cases}
-\end{align}
-
-\begin{align}
-Y = 
-\begin{cases}
-   1 &\textit{person has grey hair.}\\
-   0 &\textit{person doesn't have grey hair.}
-\end {cases}
-\end{align}
-
+%\label{table:1}
+\end{table}
+\end{flushleft}
 \begin{flushleft}\textit{Bayes' theorem} will be useful while solving this question.\end{flushleft}
 
 %\textit{Let A be the event that the person is male.} 
