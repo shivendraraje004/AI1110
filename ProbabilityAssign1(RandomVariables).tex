@@ -303,7 +303,31 @@ Assume that there are equal number of males and females.}
 
 
 \section*{\textbf{Answer}}
-let us define two random variables.
+%\begin{flushleft}
+\textit{Given:}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|m{2cm}|m{5cm}|}
+\hline
+Probability & Event \\
+\hline
+0.5 & selected person is male \\
+\hline
+0.5 & selected person is female \\
+\hline
+0.05 & probability of person having grey hair given that the person is male \\
+\hline
+0.0025 & probability of person having grey hair given that the person is female \\
+\hline
+%\caption{Table for defining random variables.}
+\end{tabular}
+%\caption{Table for defining random variables.}
+\end{table}
+%\caption{Table for defining random variables.}
+%\end{flushleft}
+
+
+\begin{flushleft}Let us define two random variables.\end{flushleft}
 
 \begin{flushleft}
 \begin{table}[h!]
@@ -335,25 +359,25 @@ Random variable & Event & Value assigned\\
 %\textit{Let A be the event that the person is male.} 
 
 %\textit{Let B be the event that the person has grey hair.} 
-We want to find the conditional probability that person is a male given that the person has grey hair, i.e., \pr{X = 1/Y = 1}.
+We want to find the conditional probability that person is a male given that the person has grey hair, i.e., \pr{X = 1|Y = 1}.
 
 \begin{flushleft}By Bayes' theorem, we have:\end{flushleft}
 
-\begin{align}\pr{X = 1/Y = 1} = \pr{Y =1/X =1} \cdot \pr{X =1} / \pr{Y = 1}\end{align}
+\begin{align}\pr{X = 1|Y = 1} = \pr{Y =1|X =1} \cdot \pr{X =1} / \pr{Y = 1}\end{align}
 
 We know that \begin{align}\pr{X = 1} = \pr{X = 0} = 0.5.\end{align}
 since there are an equal number of men and women.
 
-We also know that \begin{align}\pr{Y = 1/X = 1} = 0.05\end{align} 
+We also know that \begin{align}\pr{Y = 1|X = 1} = 0.05\end{align} 
 since 5\% of men have grey hair.
 
 To find \pr{Y = 1}, we need to use the \textit{law of total probability}. 
 We can partition the sample space into two events: having grey hair and not having grey hair. Then:
 
-\begin{align}\pr{Y = 1} = \pr{Y = 1/X = 1} \cdot \pr{X =1} + \pr{Y = 1/X = 0} \cdot \pr{X = 0}\end{align}
+\begin{align}\pr{Y = 1} = \pr{Y = 1|X = 1} \cdot \pr{X =1} + \pr{Y = 1|X = 0} \cdot \pr{X = 0}\end{align}
 
 We know that 
-\begin{align}\pr{Y = 1/X = 0} = 0.0025\end{align} 
+\begin{align}\pr{Y = 1|X = 0} = 0.0025\end{align} 
 since 0.25\% of women have grey hair. 
 We also know that 
 \begin{align}\pr{X = 0} = 0.5\end{align} 
@@ -363,7 +387,7 @@ since there are an equal number of men and women. Therefore:
 
 Putting these values into \textit{Bayes' theorem} to get:
 
-\begin{align}\pr{X =1/Y =1} = 0.05 \cdot 0.5 / 0.02625 = 0.9524\end{align}
+\begin{align}\pr{X =1|Y =1} = 0.05 \cdot 0.5 / 0.02625 = 0.9524\end{align}
 
 \textbf{Therefore, the probability that a grey-haired person selected at random is male is approximately 0.9524, or 95.24 \%.}
 
