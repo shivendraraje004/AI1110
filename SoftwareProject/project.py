@@ -1,6 +1,6 @@
 import pygame
 import os
-import random
+import numpy as np
 import sys
 
 pygame.mixer.init()
@@ -28,9 +28,9 @@ def next_track(file_list, current_track, played_tracks):
         print("All songs have been played.")
         return
 
-    next_index = random.randint(0, len(file_list) - 1)
+    next_index = np.random.randint(0, len(file_list) - 1)
     while next_index in played_tracks:
-        next_index = random.randint(0, len(file_list) - 1)
+        next_index = np.random.randint(0, len(file_list) - 1)
 
     played_tracks.append(next_index)
     music_folder = "/home/shivendraraje004/Music"
